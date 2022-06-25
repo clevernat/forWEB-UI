@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- favicon -->
+    <link
+      rel="shortcut icon"
+      href="/dist/images/favicon.ico.png"
+      type="image/x-icon"
+    />
+
+    <!-- goole font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Abel&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- bootstrap icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+
+    <!-- bootstrap css -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+
+    <!-- main css -->
+    <!-- <link rel="stylesheet" href="/dist/css/main.css" /> -->
+    <link rel="stylesheet" href="../dist/css/main.css" />
+
+    <title>Today's Forecast | ForWEB</title>
+  </head>
+  <body>
+    <main class="overlays">
+      <!-- navbar -->
+      <nav class="navbar navbar-expand-lg navbar-dark py-3">
+        <div class="container">
+          <a class="navbar-brand" href="/dist/index.html">
+            <img
+              src="/dist/images/logo.png"
+              alt="logo"
+              width="75"
+              height=""
+              loading="lazy"
+            />
+          </a>
+
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="offcanvas"
+            data-bs-target="#offcanvasNavbar"
+            aria-controls="offcanvasNavbar"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div
+            class="offcanvas offcanvas-end one"
+            tabindex="-1"
+            id="offcanvasNavbar"
+            aria-labelledby="offcanvasNavbarLabel"
+          >
+            <div class="offcanvas-header nav-color">
+              <a href="#">
+                <img
+                  src="/dist/images/logo.png"
+                  alt="logo"
+                  width="70"
+                  height=""
+                  loading="lazy"
+                />
+              </a>
+
+              <button
+                type="button"
+                class="btn-close text-reset btn-adjust"
+                data-bs-dismiss="offcanvas"
+                aria-label="Close"
+              ></button>
+            </div>
+
+            <div class="offcanvas-body nav-color">
+              <ul class="navbar-nav justify-content-end flex-grow-1 pe-0">
+                <li class="nav-item mx-3 fs-5">
+                  <a
+                    class="nav-link"
+                    aria-current="page"
+                    href="/dist/index.html"
+                    >Home</a
+                  >
+                </li>
+                <li class="nav-item mx-3 fs-5">
+                  <a
+                    class="nav-link"
+                    aria-current="page"
+                    href="/dist/about.html"
+                    >About</a
+                  >
+                </li>
+                <li class="nav-item mx-3 fs-5">
+                  <a class="nav-link" aria-current="page" href="/dist/blog.html"
+                    >Blog</a
+                  >
+                </li>
+                <li class="nav-item mx-3 fs-5">
+                  <a
+                    class="nav-link active"
+                    aria-current="page"
+                    href="/dist/forecasts.html"
+                    >Forecasts</a
+                  >
+                </li>
+                <li class="nav-item ms-3 fs-5">
+                  <a
+                    class="nav-link"
+                    aria-current="page"
+                    href="/dist/contact.html"
+                    >Contact</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </main>
+
+    <section class="single__forecast">
+      <div class="container">
+        <!-- Back button -->
+
+        <div class="back-btn">
+          <a href="/dist/index.html">
+            <span><i class="bi bi-arrow-left fa-3x"></i></span>
+          </a>
+        </div>
+
+        <!-- main -->
+        <div class="single__forecast-main">
+          <div class="single__forecast-one">
+            <!-- header -->
+            <div class="single__forecast-header">
+              <div class="knust__logo">
+                <img
+                  src="/dist/images/knst-crest.png"
+                  alt="knust-logo"
+                  width="50px"
+                />
+              </div>
+              <div class="map__header">
+                <h3>KNUST WEATHER FORECAST</h3>
+              </div>
+            </div>
+
+            <!--  -->
+            <div class="map__timestate">
+              <h3 class="text-center">
+                <span><i class="bi bi-clock-history"></i></span> 24 HOUR
+                FORECAST
+              </h3>
+            </div>
+            <hr class="map__timestate-line" />
+            <div>
+              <p class="fs-5 text-center map__timestate-date">
+                <span>WEDNESDAY</span>,<span> 20-04-2022 </span> @
+                <span>1200 </span> UTC
+              </p>
+            </div>
+
+            <!-- main map -->
+            <div class="main__map">
+              <!-- <div class="img-border"> -->
+              <div class="map">
+                <img
+                  class="img-fluid map-img"
+                  src="/dist/images/Picture1.png"
+                  alt="map"
+                />
+              </div>
+              <!-- </div> -->
+
+              <div class="forecast__icons">
+                <div class="rain">
+                  <span
+                    ><i class="bi bi-cloud-rain-heavy-fill fa-2x"></i>
+                  </span>
+                  <p>Rain</p>
+                </div>
+                <div class="wind">
+                  <div>
+                    <span> <i class="bi bi-wind fa-2x"></i> </span>
+                  </div>
+                  <div>
+                    <p>Wind</p>
+                  </div>
+                </div>
+                <div class="dust">
+                  <span><i class="bi bi-cloud-haze2-fill fa-2x"></i></span>
+                  <p>Dust</p>
+                </div>
+                <br />
+                <div class="low-risk">
+                  <p>Low Risk</p>
+                </div>
+                <div class="be-aware">
+                  <p>Be Aware</p>
+                </div>
+                <div class="be-prepared">
+                  <p>Be Prepared</p>
+                </div>
+                <div class="take-action">
+                  <p>Take Action</p>
+                </div>
+              </div>
+            </div>
+            <!-- btn -->
+            <div class="view__btn">
+              <div>
+                <a href="/dist/t&c-profile.html">
+                  <button class="view__tc fs-5">VIEW T&C PROFILE</button>
+                </a>
+              </div>
+              <div>
+                <a href="/dist/summary-forecast.html">
+                  <button class="view__summary fs-5">
+                    VIEW SUMMARY FORECAST
+                  </button>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!--  -->
+          <div class="single__forecast__days-main">
+            <div class="single__forecast-days">
+              <div>
+                <h3
+                  class="previous__forecast previous__forecast-header text-center"
+                >
+                  PREVIOUS FORECAST MAPS
+                </h3>
+              </div>
+              <!-- days of the week -->
+              <div class="monday">
+                <a href="#">
+                  <button class="monday__btn fs-4">MONDAY</button>
+                </a>
+              </div>
+              <div class="monday">
+                <a href="#">
+                  <button class="monday__btn fs-4">TUESDAY</button>
+                </a>
+              </div>
+              <div class="monday">
+                <a href="#">
+                  <button class="monday__btn fs-4">WEDNESDAY</button>
+                </a>
+              </div>
+              <div class="monday">
+                <a href="#">
+                  <button class="monday__btn fs-4">THURSDAY</button>
+                </a>
+              </div>
+              <div class="monday">
+                <a href="#">
+                  <button class="monday__btn fs-4">FRIDAY</button>
+                </a>
+              </div>
+              <div class="monday">
+                <a href="#">
+                  <button class="monday__btn fs-4">SATURDAY</button>
+                </a>
+              </div>
+              <div class="monday">
+                <a href="#">
+                  <button class="monday__btn fs-4">SUNDAY</button>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- bootstrap js -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- main js -->
+    <script src="/dist/js/app.js"></script>
+  </body>
+</html>

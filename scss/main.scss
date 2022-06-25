@@ -1,0 +1,1641 @@
+@import './partials/variables';
+
+// /*
+// ! debug
+// ? comment
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  line-height: 1.6rem;
+  font-family: $font-stack;
+  list-style: none;
+}
+// transition: all ease-in-out 0.5s;
+a {
+  text-decoration: none;
+}
+
+html, body{
+  scroll-behavior: smooth;
+}
+
+/*
+! INDEX PAGE
+
+
+*/
+
+// NAVBAR AND SHOWCASE AREA
+nav.navbar{
+  position: sticky;
+  top:0;
+  z-index: 2;
+}
+
+
+
+.overlays{
+  background: $dark-color;
+  padding: 0.5rem 0;
+  position: sticky;
+  top: 0;
+  z-index: 4;
+}
+
+
+
+
+.showcase {
+  background: url('/dist/images/showcase.jpg') no-repeat center top/cover;
+
+
+  min-height: 500px;
+  background-attachment:fixed;
+
+  .overlay {
+    position: relative;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    
+
+  }
+
+
+
+  // alert
+  .alert-color {
+    background-color: $danger-color;
+    color: $white-color;
+    margin: 1rem 0;
+  }
+
+
+  .one1{
+    display: none;
+  }
+
+  
+
+  // showcase-area
+  &-main {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 0 0 5rem 0
+
+  };
+
+  p.forweb-text {
+    color: $white-color;
+  }
+
+
+
+  &-text {
+    // border: 1px solid red;
+    margin: 7.5rem 0 0 0;
+
+    h3 {
+      color: $white-color;
+    }
+  };
+
+  &-title {
+    display: block;
+    font-size: 60px;
+    font-weight:bolder;
+    color: $yellow-color;
+  }
+
+  &-img {
+    // border: 1px solid blue;
+    margin: 7.5rem 0 0 0;
+  }
+
+  &-img img {
+    position: relative;
+    top: -30px;
+    left: 45px;
+  }
+
+  &-btn-link button.btn-1 {
+    @extend %btn-shared;
+    padding: 1rem 2.3rem;
+    background-color: $yellow-color;
+
+  };
+
+  &-btn-link button.btn-2 {
+    @extend %btn-shared;
+    padding: 1rem 2.75rem;
+    background-color: $white-color;
+  }
+
+
+  // nedia query
+  @media(max-width:768px) {
+   
+   
+    .btn-adjust{
+      background-color: $white-color;
+      margin-right: 1rem;
+    };
+    .nav-color{
+      background-color: $dark-color;
+    }
+    .a {
+      display: none;
+    }
+
+    // alert
+  .alert-color {
+    margin: 0.75rem 0;
+  }
+
+  .one{
+    display: none;
+  }
+
+  .one1{
+    display: block;
+    text-align: center;
+  }
+
+   // showcase-area
+   &-main {
+    display: grid;
+    grid-template-columns:1fr;
+  };
+
+
+  &-text {
+    margin: 0;
+    order: 1;
+    text-align: center
+  };
+
+
+  &-img {
+    margin: 0;
+    order: 2;
+  };
+
+  &-img img {
+    position: relative;
+    top: 0;
+    left: 0;
+  }
+
+    &-btn-link button.btn-1 {
+      margin: 0;
+      padding: 0.75rem 1.5rem;
+   
+    }
+
+    &-btn-link button.btn-2 {
+      margin: 0;
+      padding: 0.75rem 1.7rem;
+      background-color: $white-color;
+    }
+
+    &-btn{
+      text-align: center;
+    }
+  }
+
+
+  @media (min-width:769px) and (max-width: 1024px){
+
+    .btn-adjust{
+      background-color: $white-color;
+      margin-right: 1rem;
+    };
+    .nav-color{
+      background-color: $dark-color;
+    }
+    .a {
+      display: none;
+    }
+
+      // alert
+  .alert-color {
+    margin: 0.75rem 0;
+  }
+
+  .one{
+    display: none;
+  }
+
+  .one1{
+    display: block;
+    text-align: left;
+  }
+
+  &-img img {
+    position: relative;
+    top: 35px;
+    left: 0;
+  }
+
+
+
+    &-btn-link button.btn-1 {
+      margin: 0;
+      padding: 0.75rem 0.9rem;
+    }
+
+    &-btn-link button.btn-2 {
+      margin: 0;
+      padding: 0.75rem 1.3rem;
+      background-color: $white-color;
+    }
+  }
+
+
+}
+
+%btn-shared {
+  margin: 1.6rem 0;
+  color: $dark-color;
+  border: none;
+  border-radius: 5px;
+}
+
+
+
+// WHO WE ARE
+
+.who-we-are{
+  
+  padding: 4.5rem 0 0 0;
+  background-color:$white-color;
+
+  h2{
+    color: $light-blue-color;
+    font-weight: bolder;
+  }
+
+
+  &__main{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+ 
+  }
+
+  &__img{
+    .wwd-img{
+      position: relative;
+      right: 76px;
+      bottom: 2rem;
+    }
+  }
+  
+  &__text{
+    p{
+      margin: 9rem 0 0 0;
+    }
+  }
+
+
+  .showcase-btn-link button.btn-3 {
+    @extend %btn-shared;
+    padding: 1rem 2.3rem;
+    background-color: $yellow-color;
+  };
+
+
+
+
+  @media(max-width:768px){
+
+    padding: 2.5rem 0 0 0;    
+
+
+    &__main{
+      grid-template-columns:1fr;
+   
+    }
+
+    &__img{
+      .wwd-img{
+        right: 0;
+        bottom: 0;
+      }
+    }
+
+    &__text{
+      p{
+        margin: 0;
+        padding: 0;
+        text-align: center;
+
+      }
+
+      a{
+        display: block;
+        text-align: center;
+      }
+    }
+
+
+    
+  .showcase-btn-link button.btn-3 {
+    display: block;
+    width:100%;
+  };
+
+
+  }
+
+
+
+
+  @media (min-width:769px) and (max-width: 1024px){
+
+    padding: 3.5rem 0 0 0;
+
+    &__img{
+  
+      .wwd-img{
+        position: relative;
+        right: 40px;
+        bottom: -1rem;
+      }
+    }
+
+    &__text{
+  
+      p{
+        margin: 1.5rem 0 0 0;
+        text-align: left;
+      }
+
+      a{
+        display: block;
+        text-align: left;
+      }
+    }
+
+
+  }
+  
+}
+
+
+
+
+// WHAT WE DO
+
+.what-we-do{
+  background-color:$light-blue-color;
+
+  .overlay {
+    position: relative;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 4.5rem 0 7rem 0;
+  }
+
+  .text__main{
+    // border: 1px solid green;
+    position: relative;
+    top: 8.5rem;
+  }
+
+  .text-main{
+    display: flex;
+    margin: 0 0 2rem 0;
+
+    .one, .two, .three{
+      margin: 0 0.5rem 0 0;
+    }
+  }
+
+  h2{
+    color: $white-color;
+    font-weight: bolder;
+  }
+
+
+  &__main{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+ 
+  }
+
+  &__img{
+    display: block;
+    text-align: end;
+
+    .wwd-img{
+      position: relative;
+    
+      left: 0.65rem;
+     
+    }
+  }
+  
+  &__text{
+
+    p{
+      margin: 8.5rem 0 0 0;
+    }
+
+   
+  }
+
+  .showcase-btn-link button.btn-4 {
+    @extend %btn-shared1;
+    padding: 1rem 2.3rem;
+    background-color: $light-blue-color;
+  };
+
+
+
+
+
+  @media(max-width:768px){
+
+    padding:0;    
+
+    .overlay {
+      padding: 2.5rem 0 1rem 0;
+    }
+
+    &__main{
+    
+      grid-template-columns:1fr;
+   
+    }
+
+    .text__main{
+  
+      position: relative;
+      top: 1rem;
+    }
+
+    &__img{
+      order: 1;
+      display: block;
+      text-align: center;
+
+      .wwd-img1{
+        right: 0;
+        bottom: 0;
+      
+       
+      }
+    }
+
+    &__text{
+      
+      order: 2;
+  
+      p{
+        
+        margin: 2rem 0 0 0;
+        text-align: center;
+      }
+
+
+    }
+
+
+    .showcase-btn-link button.btn-4 {
+          
+      display: block;
+      width: 100%
+  
+    };
+
+
+
+    
+
+  }
+
+  %btn-shared1 {
+    margin: 1.6rem 0;
+    color: $white-color;
+    border: none;
+    border-radius: 5px;
+  }
+  
+
+
+
+  @media (min-width:769px) and (max-width: 1024px){
+
+    padding: 0;
+
+    &__img{
+    
+  
+      .wwd-img{
+        position: relative;
+        right: 40px;
+        bottom: -1rem;
+      }
+    }
+
+    .text__main{
+      position: relative;
+      top: 2.5rem;
+    }
+
+    &__text{
+      
+  
+      p{
+       
+        margin: 1.5rem 0 0 0;
+        text-align: left;
+      }
+
+      a{
+        display: block;
+        text-align: left;
+      }
+    }
+
+  }
+
+
+}
+
+
+// Gallery
+
+
+.gallery{
+  padding: 4.5rem 0 5rem 0;
+  background-color:$white-color;
+
+  .gallery__heading{
+    color: $light-blue-color;
+    font-weight: bolder;
+    padding: 0 0 3rem 0 ;
+  }
+
+  .icon-prop{
+    font-size: 1.1rem;
+
+  }
+
+  .accordian-icon{
+    padding: 1rem;
+  }
+
+  .name, .interest{
+    span{
+      margin: 0 0.5rem 0 0;
+    }
+  }
+
+  .school{
+    span{
+      margin: 0 0.7rem 0 0;
+    }
+  }
+
+.text-font{
+  font-size: 1rem;
+}
+
+
+
+  .main__card{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    
+  }
+
+  .one__1{
+    border-radius: 5px;
+    box-shadow: 0 0 7px 0 $dark-color;
+    margin: 0 0.5rem 0.5rem 0;
+  }
+
+  .hr-color{
+    background-color: $danger-color;
+    margin: 2rem 0 4rem 0;
+  }
+
+
+
+  .name, .school, .interest{
+    display: flex;
+    margin: 0 0.25rem;
+  }
+
+  .image-fluid{
+    width: 100%;
+  }
+
+
+
+  @media(max-width:500px){
+    padding: 2.5rem 0 3rem 0;
+   
+    .gallery__heading{
+      padding: 0 0 1rem 0 ;
+    }
+  
+
+    .accordian-icon{
+      padding: 0;
+    }
+
+    .main__card{
+      
+      grid-template-columns: 1fr;
+      
+    }
+
+    .one__1{
+      margin: 0 0 1.2rem 0;
+    }
+
+    .text-font{
+      font-size: 0.8rem;
+    }
+  }
+
+  @media (max-width:912px) and (min-width: 501px){
+    .main__card{
+     
+      grid-template-columns: 1fr 1fr 1fr;
+      
+    }
+
+    .text-font{
+      font-size: 0.8rem;
+    }
+    
+    
+  }
+  
+}
+
+
+
+// Want to Be Part of Us
+.contact__us{
+
+  &-heading{
+    // display: none;
+    font-weight: bolder;
+  }
+  // padding: 4.5rem 0 4.5rem 0;
+  background-color: $light-blue-color;
+
+  .overlay {
+    position: relative;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 4.5rem 0 4.5rem 0;
+  }
+
+  .contact__us-main{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  &-img, &-form{
+    margin: 3rem 0 0 0;
+    // border: 1px solid red;
+  }
+
+
+  &-img{
+    .wwd-img{
+      position: relative;
+      right: 50px;
+      top: 1.5rem;
+      min-width: 100%
+    }
+  }
+
+  &-btn-link button.btn-3 {
+    @extend %btn-shared3;
+    padding: 1rem 4rem;
+    background-color: $yellow-color;
+    
+  };
+
+  @media(max-width:768px){
+    .contact__us-main{
+      // display: grid;
+      grid-template-columns:1fr;
+    }
+
+    .overlay {
+      padding: 2.5rem 0 2.5rem 0;
+    }
+
+
+    &-img{
+      .wwd-img{
+        position: relative;
+        right: 7.5px;
+        top: 0rem;
+        min-width: 100%
+      }
+    }
+
+    &-img, &-form{
+      margin: 1rem 0 0 0;
+      // border: 1px solid red;
+    }
+
+    .btn-3{
+      width: 100%;
+    }
+
+
+
+  }
+
+  @media (max-width:912px) and (min-width: 769px){
+    &-img{
+      .wwd-img{
+        position: relative;
+        right: 1rem;
+        top: 10rem;
+        min-width: 100%
+      }
+    }
+    
+    
+  }
+
+}
+
+
+
+
+
+%btn-shared3 {
+  margin: 0.5rem 0;
+  color: $white-color;
+  border: none;
+  border-radius: 5px;
+}
+
+
+
+// footer
+footer{
+  background-color: $yellow-color;
+  color: $white-color;
+
+  .overlay {
+    position: relative;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.4);
+    
+
+  }
+
+
+  .footer__main{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    .footer__copyright{
+      margin: 1.5rem 0 1rem 0;
+    }
+
+    .social__media{
+      display: flex;
+      margin: 1.5rem 0 1rem 0;
+      justify-content: flex-end;
+      
+
+      &-linkedin, &-facebook, &-twitter, &-instagram{
+        padding: 0 1rem;
+
+      }
+      span{
+        font-size: 1.5rem;
+        color: $white-color;
+      }
+    }
+  }
+
+  .footer__text{
+    text-align: center;
+    padding: 0 0 1rem 0;
+  }
+
+  @media(max-width:768px){
+
+
+    .footer__main{
+  
+      .social__media{
+       
+  
+        &-linkedin, &-facebook, &-twitter, &-instagram{
+          padding: 0 0.3rem;
+  
+        }
+        span{
+          font-size: 1.2rem;
+        }
+      }
+    }
+
+    .footer__text p {
+      font-size: 1.1rem;
+      padding: 0;
+      margin: 0;
+    }
+    
+  }
+}
+
+
+
+
+/*
+! SINGLE FORECAST
+*/
+
+.back-btn{
+  margin:1.75rem 0;
+  span i{
+    color: $dark-color;
+  }
+}
+
+
+.single__forecast-main{
+  
+  margin: 0 0 5.5rem 0;
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  grid-gap: 3rem;
+  border-radius: 10px;
+
+
+  .map__header h3{
+    font-weight: bolder;
+  }
+
+
+  .single__forecast-one{
+
+    // border: 1px solid green;
+
+
+    .single__forecast-header{
+      
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 9.5vh;
+      background: $light-blue-color;
+      border-radius: 10px 10px 0px 0px;
+      color: $white-color;
+      grid-gap: 1.5rem;
+
+
+      // spacing
+      margin: 0 auto;
+      max-width: 770px;
+     
+    }
+
+
+
+  }
+
+  .map__timestate{
+    margin: 1rem 0 ;
+  }
+
+  .map__timestate-date{
+    margin: 1rem 0;
+    font-weight: bolder;
+
+  }
+
+  hr.map__timestate-line{
+   
+    height: 0.25rem;
+    margin: 0 auto;
+    max-width: 450px;
+    background: $deep-blue-color;    
+    
+  }
+
+
+  .main__map{
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    
+
+    .map{
+      // border: 1px solid red;
+
+      .map-img{
+        max-width: 520px;
+        height: 610px;
+        display: block;
+        
+        border: 2px solid $deep-blue-color;
+        margin: 0 auto;
+        padding: 2rem;
+        
+      }
+
+    }
+
+    .forecast__icons{
+      // border: 1px solid green;
+
+      .rain, .wind, .dust{
+        border: 3px solid $dark-color;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 9vh;
+        margin: 0 3rem;
+        padding:1rem 0 0 0;
+                
+        // spacing
+        position: relative;
+        // right: 6rem;
+        right: 2rem;
+
+        p{
+          font-size: 1.3rem;
+        }
+      }
+
+    
+     
+      .low-risk, .be-aware, .be-prepared, .take-action{
+        border: 3px solid $dark-color;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 9.3vh;
+        margin: 0 3rem;
+
+      // spacing
+        position: relative;
+        // right: 6rem;
+        right: 2rem;
+
+        p{
+          font-size: 1.3rem;
+        }
+      }
+
+      .low-risk{
+        background-color: $green-color;
+      }
+
+      .be-aware{
+        background-color: $yellow-color;
+      }
+
+      .be-prepared{
+        background-color: $orange-color;
+      }
+
+      .take-action{
+        background-color: $danger-color;
+      }
+    }
+  }
+
+
+
+
+  // btns for single forecast
+  .view__btn{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    .view__tc{
+      width: 75%;
+      padding: 1.5rem 0rem;
+      background-color: $light-blue-color;
+      margin: 5rem 0 0 5.5rem;
+      border: none;
+      border-radius: 10px;
+      color: $white-color;
+      font-weight: bolder;
+    }
+
+    .view__summary{
+      width: 77%;
+      padding: 1.5rem 0rem;
+      background-color: $white-color;
+      margin: 5rem 0 0 1.5rem;
+      border: 2px solid $deep-blue-color;
+      border-radius: 10px;
+      color: $deep-blue-color;
+      font-weight: bolder;
+    }
+
+
+  }
+
+
+  .single__forecast-days{
+
+    background: $light-blue-color;
+    display: flex;
+    flex-direction: column;
+    // border: 1px solid blue;
+    padding: 0 0 2.3rem 0;
+    border-radius: 10px;
+    position: sticky;
+    top: 6.5rem;
+    
+
+
+    .previous__forecast-header{
+      color: $white-color;
+      font-weight: bolder;
+      padding: 1.5rem 0;
+    }
+
+    .monday__btn{
+      display: block;
+      width: 80%;
+      padding: 1.5rem 0;
+      margin: 0.65rem 0 1rem 2rem;
+      border-radius: 10px;
+      background: $yellow-color;
+      border: none;
+      
+    }
+
+  }
+
+
+}
+
+
+@media(max-width:768px){
+
+  // Nav bar 
+  .btn-adjust{
+    background-color: $white-color;
+    margin-right: 1rem;
+  };
+
+  .nav-color{
+    background-color: $dark-color;
+  }
+
+ 
+  .single__forecast-main{
+  margin: 0 0 2.5rem 0;
+  grid-template-columns: 1fr;
+  grid-gap: 1.5rem;
+  border-radius: 10px;
+
+  .single__forecast-one{
+    border-bottom: 1px dashed $dark-color;
+  }
+
+
+  .main__map{
+    // grid-template-columns: 3fr 1fr;
+    .map{
+      // border: 1px solid red;
+
+      .map-img{
+        max-width: 200px;
+        height: 250px;
+        display: block;
+       
+        padding: 0.5rem;
+       
+        
+      }
+
+    }
+
+
+
+
+
+    .forecast__icons{
+      // border: 1px solid green;
+
+      // setting the borders to match the map borders.
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 9vh;
+
+      span i{
+        font-size: 1rem;
+      }
+
+      .rain, .wind, .dust{
+       
+        margin: 0 2rem;
+        padding: 3rem 0rem 1.8rem;
+                
+        // spacing
+        position: relative;
+        right: 1.9rem;
+
+
+        p{
+          font-size: 1rem;
+        }
+      }
+
+    
+     
+      .low-risk, .be-aware, .be-prepared, .take-action{
+    
+        max-height: 62.5px;
+        margin: 0 2rem;
+
+
+
+      // spacing
+        position: relative;
+        bottom: 17.2rem;
+        left: 2.1rem;
+
+        p{
+          font-size: 1rem;
+          text-align: center;
+        }
+      }
+
+    }
+
+
+    
+
+  }
+
+
+
+  
+
+
+
+
+   // btns for single forecast
+   .view__btn{
+    
+    grid-template-columns: 1fr;
+
+    .view__tc{
+      width: 100%;
+      display: block;
+      margin: 1.5rem auto 0;
+      padding: 1rem 0rem;
+     
+    }
+
+    .view__summary{
+      width: 100%;
+      display: block;
+      margin: 1rem auto 3rem;
+      padding: 0.8rem 0rem;
+      
+    }
+
+
+  }
+
+
+    .single__forecast-days{
+      margin-top: 1.5rem;
+      background-color: $dark-color;
+
+      .monday__btn{
+        // display: none;
+        margin: 0.65rem 0 1rem 2rem;
+        padding: 0.75rem 0;
+    
+      }
+
+    }
+
+  }
+
+}
+
+
+
+
+
+@media(min-width:768px) and (max-width:1023px){
+  // Nav bar 
+  .btn-adjust{
+    background-color: $white-color;
+    margin-right: 1rem;
+  };
+
+  .nav-color{
+    background-color: $dark-color;
+  }
+
+  .single__forecast-main{
+    margin: 0 0 2.5rem 0;
+    grid-template-columns: 1fr;
+    grid-gap: 1.5rem;
+    border-radius: 10px;
+
+    .single__forecast-one{
+      border-bottom: 1px dashed $dark-color;
+    }
+  
+
+
+
+
+    // map section
+    .main__map{
+      // grid-template-columns: 3fr 1fr;
+      .map{
+        // border: 1px solid red;
+  
+        .map-img{
+          // max-width: 200px;
+          max-width: 350px;
+          height: 350px;
+          display: block;
+         
+          padding: 0.5rem;
+         
+          
+        }
+  
+      }
+  
+  
+  
+  
+  
+      .forecast__icons{
+        // border: 1px solid green;
+  
+        // setting the borders to match the map borders.
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 9vh;
+  
+        span i{
+          font-size: 1.2rem;
+        }
+  
+        .rain, .wind, .dust{
+         
+          margin: 0 3rem;
+          padding: 4rem 0rem 2rem;
+                  
+          // spacing
+          position: relative;
+          right: 6rem;
+          top: 1rem;
+  
+  
+          p{
+            font-size: 1rem;
+          }
+        }
+  
+      
+       
+        .low-risk, .be-aware, .be-prepared, .take-action{
+      
+          height: 88.5px;
+          margin: 0 3rem;
+          padding: 2.3rem 0;
+  
+  
+  
+        // spacing
+          position: relative;
+          bottom: 21.5rem;
+          left: 0.5rem;
+  
+          p{
+            font-size: 1rem;
+            text-align: center;
+          }
+        }
+  
+      }
+  
+  
+      
+  
+    }
+  
+  
+
+
+
+
+
+   // btns for single forecast
+   .view__btn{
+    
+    grid-template-columns: 1fr 1fr;
+
+    .view__tc{
+      width: 90%;
+      display: block;
+      margin: 3.1rem auto 0;
+      padding: 1.5rem 0rem;
+     
+    }
+
+    .view__summary{
+      width: 90%;
+      display: block;
+      margin: 3.2rem auto 3rem;
+      padding: 1.3rem 0rem;
+      
+    }
+
+
+  }
+
+
+
+
+  .single__forecast-days{
+    margin-top: 1.5rem;
+    background-color: $dark-color;
+
+    .monday__btn{
+      // display: none;
+      margin: 0.65rem 0 1rem 4.6rem;
+      padding: 1.2rem 0;
+  
+    }
+
+  }
+
+
+
+
+
+  }
+
+
+}
+
+
+
+
+
+/*
+! T & C PROFILE
+*/
+
+.t-and-c__profile{
+  
+  // spacing
+  margin: 3rem auto 0;
+  max-width: 698px;
+
+}
+
+
+
+/*
+! SUMMARY FORECAST
+*/
+
+.forecast__summary{
+  // border: 1px solid $deep-blue-color;
+  margin: auto;
+  max-width: 770px;
+
+ 
+
+    table {
+      // border: 1px solid $deep-blue-color;
+      border-collapse: collapse;
+      width: 100%;
+
+      .summary_color td{
+        font-size: 1.25rem;
+      }
+    }
+
+    td, th {
+      border: 1px solid rgb(226, 226, 226);
+      text-align: left;
+      padding:1rem;
+
+    }
+
+    .forecast__summary-header{
+      padding: 1rem;
+      background-color: $yellow-color;
+      margin: 0 0 1rem;
+      border-radius: 10px;
+    ;
+    border-radius: 10px 10px 0px 0px;
+
+      h3{
+        font-weight: bolder;
+      }
+    }
+
+
+    .sunrise__sunset{
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      border: 1px solid rgb(226, 226, 226);
+      padding: 1rem;
+
+      .sunrise{
+        text-align: right;
+
+        h4{
+          font-weight: bold;
+        }
+        
+      }
+
+
+      .sunset{
+
+        h4{
+          font-weight: bold;
+        }
+        
+      }
+
+
+    }
+
+}
+
+
+@media(max-width:768px){
+  .forecast__summary{
+    table {
+      
+      // border-collapse: collapse;
+      // width: 100%;
+
+      .summary_color td{
+        font-size: 1rem;
+      }
+    }
+
+
+  .sunrise h4, .sunset h4{
+    font-size: 1.1rem;
+  }
+  }
+
+}
+
+
+
+.map__loc{
+  // border: 1px solid green;
+  // padding: 2.5rem 0 2.5rem 0;
+  padding: 5rem 0 0;
+}
+
+@media(max-width:768px){
+  
+.map__loc{
+  display: none;
+}
+}
+
+
+
+
+/*
+
+! ABOUT PAGE
+
+*/
+
+.video__forweb{
+  .video1{
+    margin:0 auto;
+    width: 100%;
+    height: 650px;
+    margin: 0 0 4rem;
+  }
+
+}
+
+
+
+@media(max-width:768px){
+
+  .video__forweb{
+    .video1{
+      // margin:0 auto;
+      
+      // width: 100%;
+      height: 250px;
+      // margin: 0 0 4rem;
+      margin: 6rem 0 0;
+    }
+  
+  }
+
+
+  footer{
+    position: relative;
+    top: 10rem;
+  }
+  
+
+}
+
+
+
+
+
+/*
+!FORECASTS
+*/
+
+.forecasts{
+  margin-bottom: 4rem;
+
+  h1{
+    font-weight: bolder;
+    color: $dark-color;
+  }
+
+  .forecasts__grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-content: center;
+    align-items: center;
+    height: 60vh;
+    
+  
+    .monday{
+      .monday__btn{
+        padding:2.5rem 7rem;
+        background-color: $yellow-color;
+        border: none;
+        border-radius: 10px;
+        font-size: 1.5rem;
+      }
+    }
+  }
+}
+
+
+
+@media (max-width:1024px){
+  
+  .forecasts{
+    .forecasts__grid{
+      grid-template-columns: 1fr;
+
+      .monday{
+        .monday__btn{
+          width: 100%;
+          margin: 1rem 0;
+          padding: 2rem 6rem;
+          font-size:1.4rem;
+        }
+      }
+      
+    }
+  }
+
+
+}
+
+
+
