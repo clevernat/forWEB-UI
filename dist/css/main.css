@@ -18,13 +18,13 @@ html, body {
 /*
 ! INDEX PAGE
 
-
 */
 nav.navbar {
   position: -webkit-sticky;
   position: sticky;
   top: 0;
-  z-index: 2;
+  z-index: 4;
+  background-color: #000;
 }
 
 .overlays {
