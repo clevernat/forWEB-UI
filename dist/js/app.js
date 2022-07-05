@@ -4,8 +4,8 @@ const labelDate = document.querySelector('.date');
 const currentDate = new Date()
 
 const options = {
-    month: 'short',
-    year: '2-digit',
+    // month: 'long',
+    year: 'numeric',
 }
 
 labelDate.textContent = new Intl.DateTimeFormat(navigator.languages, options).format(currentDate);
