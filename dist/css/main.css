@@ -382,7 +382,7 @@ nav.navbar {
 .gallery .accordian-icon {
   padding: 1rem;
 }
-.gallery .name span, .gallery .interest span {
+.gallery .name span {
   margin: 0 0.5rem 0 0;
 }
 .gallery .school span {
@@ -391,9 +391,25 @@ nav.navbar {
 .gallery .text-font {
   font-size: 1rem;
 }
+.gallery .interest {
+  border: 1px solid red;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 1rem;
+}
+.gallery .interest-one {
+  background-color: red;
+  text-align: center;
+}
 .gallery .main__card {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+}
+.gallery .img-link {
+  color: #000;
+}
+.gallery .one__1:hover {
+  background-color: rgb(233, 233, 233);
 }
 .gallery .one__1 {
   border-radius: 5px;
@@ -404,7 +420,7 @@ nav.navbar {
   background-color: rgba(219, 0, 0, 0.7490196078);
   margin: 2rem 0 4rem 0;
 }
-.gallery .name, .gallery .school, .gallery .interest {
+.gallery .name, .gallery .school {
   display: flex;
   margin: 0 0.25rem;
 }
