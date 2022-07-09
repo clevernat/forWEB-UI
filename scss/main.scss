@@ -636,7 +636,7 @@ nav.navbar{
   }
 
   .one__1:hover{
-    background-color: rgb(233, 233, 233);
+    background-color:$light-grey;
   }
 
   .one__1{
@@ -1661,4 +1661,97 @@ footer{
 }
 
 
+/*
+! Moderator-Profile
+*/
 
+.profile{
+  display: grid;
+  grid-template-columns: 1.5fr 3fr;
+  margin: 2rem 0 3.2rem;
+  grid-gap: 4rem;
+
+
+
+  .individual{
+    // border: 1px solid $deep-blue-color;
+    border-radius: 0.25rem;
+    box-shadow: 0 0 3px 0 $deep-blue-color;
+    text-align: center;
+    padding: 1rem 0;
+
+
+    .ind__img{
+      // width: 50%;
+      border-radius: 100%;
+      max-width: 300px;
+      height: 300px;
+      
+      display: block;
+      margin: 0 auto 1rem;
+      
+    }
+
+    .location, .short-intro{
+      color:$gray;
+    }
+
+    .ind__name h3{
+      font-weight: bold;
+    }
+
+    .ind__social_media{
+      // border: 1px solid green;
+      span{
+        font-size: 1.5rem;  
+        i{
+          color: $deep-blue-color;
+        }
+      }
+    }
+  }
+
+  .about{
+    // border: 1px solid blue;
+
+    .about-profile h2{
+      font-weight: bold ;
+    
+    }
+
+    .about-story{
+      text-align: left;
+      color: rgb(77, 74, 74);
+    
+    }
+  }
+
+}
+
+
+
+@media(max-width:820px){
+  .profile{
+    display: grid;
+    grid-template-columns: 1fr;
+    margin: 0;
+    grid-gap: 1rem;
+  }  
+
+  .individual{
+    border-radius: 0.25rem;
+    box-shadow: 0 0 3px 0 $deep-blue-color;
+    text-align: center;
+    padding: 1rem 0;
+  }
+
+
+  .about-profile h2{
+    text-align: center;
+    margin: 1rem 0;
+  }
+
+  .about-story p{
+    text-align: justify;
+  }
+}
