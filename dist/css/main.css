@@ -1012,7 +1012,7 @@ footer .footer__text {
 .profile {
   display: grid;
   grid-template-columns: 1.5fr 3fr;
-  margin: 2rem 0 3.2rem;
+  margin: 2rem 0 4.02rem;
   grid-gap: 4rem;
 }
 .profile .individual {
@@ -1033,6 +1033,9 @@ footer .footer__text {
 }
 .profile .individual .ind__name h3 {
   font-weight: bold;
+}
+.profile .individual .ind__social_media {
+  margin-top: 1rem;
 }
 .profile .individual .ind__social_media span {
   font-size: 1.5rem;

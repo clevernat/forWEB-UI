@@ -1668,7 +1668,7 @@ footer{
 .profile{
   display: grid;
   grid-template-columns: 1.5fr 3fr;
-  margin: 2rem 0 3.2rem;
+  margin: 2rem 0 4.02rem;
   grid-gap: 4rem;
 
 
@@ -1701,7 +1701,7 @@ footer{
     }
 
     .ind__social_media{
-      // border: 1px solid green;
+      margin-top: 1rem;
       span{
         font-size: 1.5rem;  
         i{
