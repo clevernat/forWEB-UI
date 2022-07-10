@@ -1016,11 +1016,14 @@ footer .footer__text {
   margin: 2rem 0 4.02rem;
   grid-gap: 4rem;
 }
-.profile .individual {
+.profile .individual .individual__line {
   border-radius: 0.25rem;
   box-shadow: 0 0 3px 0 #45AED8;
   text-align: center;
   padding: 1rem 0;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 7.1rem;
 }
 .profile .individual .ind__img {
   border-radius: 100%;
@@ -1060,11 +1063,14 @@ footer .footer__text {
     grid-gap: 1rem;
   }
 
-  .individual {
+  .individual__line {
     border-radius: 0.25rem;
     box-shadow: 0 0 3px 0 #45AED8;
     text-align: center;
     padding: 1rem 0;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
   }
 
   .about-profile h2 {

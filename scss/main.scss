@@ -1675,11 +1675,16 @@ footer{
 
 
   .individual{
-    // border: 1px solid $deep-blue-color;
+
+    .individual__line{
     border-radius: 0.25rem;
     box-shadow: 0 0 3px 0 $deep-blue-color;
     text-align: center;
     padding: 1rem 0;
+    position: sticky;
+    top: 7.1rem;
+    
+    }
 
 
     .ind__img{
@@ -1739,11 +1744,14 @@ footer{
     grid-gap: 1rem;
   }  
 
-  .individual{
+  .individual__line{
     border-radius: 0.25rem;
     box-shadow: 0 0 3px 0 $deep-blue-color;
     text-align: center;
     padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    
   }
 
 
